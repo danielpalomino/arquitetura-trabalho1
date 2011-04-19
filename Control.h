@@ -6,7 +6,7 @@ SC_MODULE(Control) {
 	sc_in <sc_lv<6> > op;
 
 	//SAIDAS MUXS
-	sc_out<sc_logic> breg_in, ula_in, pc_in, ula_func;
+	sc_out<sc_logic> aluSrc, MemtoReg, MemRead, MemWrite, ControlAlu, Regwrite, RegDst;
 
 	void compute();
 
