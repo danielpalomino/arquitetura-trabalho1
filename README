@@ -1,0 +1,9 @@
+Repositório para os códigos utilizados no trabalho-1 de arquitetura (Luigi Carro):
+
+Objetivo:
+	Desenvolver em SystemC uma arquitetura de um processador que execute as seguintes instruções:
+		Store (SW)
+		Load (LW)
+		Add (LW)
+		Branch Equalt (Beq)
+
