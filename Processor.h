@@ -9,21 +9,23 @@ SC_MODULE(Processor){
 	sc_in<sc_logic> clock;
 
 	Control *control;
-	MemAdress *memAdress;
+	MemInstruction *memIntruction;
 	Breg *breg;
 	Ula *ula;
 	MemData *memData;
 
 	sc_signal<sc_int> pc;
 
-	void computeOneInstruction();
+	void computeInstruction();
 
 	SC_CTOR(Processor){
 		pc = 0;
-
 		control = new Control();
-		
-		SC_METHOD(computeOneInstruction);
+		memInstruction = new MemInstruction();
+		breg = new Breg();
+		ula = new Ula();
+		memData = new MemData();
+		SC_METHOD(computeInstruction);
 		sensitive << clock;
 	}
 };

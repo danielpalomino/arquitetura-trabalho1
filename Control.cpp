@@ -3,30 +3,41 @@
 void Control::compute() {
 
 	switch (op.read().to_uint()) {
-		//add
+		//ADD
 		case 0:
-			
+			aluSrc.write(SC_LOGIC_0);
+			MemtoReg.write(SC_LOGIC_0);
+			MemWrite.write(SC_LOGIC_O);
+			ControlAlu.write(SC_LOGIC_0);
+			Regwrite.write(SC_LOGIC_O);
+			RegDst.write(SC_LOGIC_0);
 			break;
 		//LOAD WORD
 		case 1:
-			breg_in.write(SC_LOGIC_0);
-			ula_in.write(SC_LOGIC_0);
-			pc_in.write(SC_LOGIC_0);
-			ula_func.write(SC_LOGIC_0);
+			aluSrc.write(SC_LOGIC_0);
+			MemtoReg.write(SC_LOGIC_0);
+			MemWrite.write(SC_LOGIC_O);
+			ControlAlu.write(SC_LOGIC_0);
+			Regwrite.write(SC_LOGIC_O);
+			RegDst.write(SC_LOGIC_0);
 			break;
 		//STORE WORD
 		case 2:
-			breg_in.write(SC_LOGIC_0);
-			ula_in.write(SC_LOGIC_0);
-			pc_in.write(SC_LOGIC_0);
-			ula_func.write(SC_LOGIC_0);
+			aluSrc.write(SC_LOGIC_0);
+			MemtoReg.write(SC_LOGIC_0);
+			MemWrite.write(SC_LOGIC_O);
+			ControlAlu.write(SC_LOGIC_0);
+			Regwrite.write(SC_LOGIC_O);
+			RegDst.write(SC_LOGIC_0);
 			break;
 		//BRANCH EQUAL
 		default:
-			breg_in.write(SC_LOGIC_0);
-			ula_in.write(SC_LOGIC_0);
-			pc_in.write(SC_LOGIC_0);
-			ula_func.write(SC_LOGIC_0);
+			aluSrc.write(SC_LOGIC_0);
+			MemtoReg.write(SC_LOGIC_0);
+			MemWrite.write(SC_LOGIC_O);
+			ControlAlu.write(SC_LOGIC_0);
+			Regwrite.write(SC_LOGIC_O);
+			RegDst.write(SC_LOGIC_0);
 			break;
 	}
 }
