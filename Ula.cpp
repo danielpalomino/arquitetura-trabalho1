@@ -12,5 +12,5 @@ void Ula::compute(){
 	else
 		flag_z.write(SC_LOGIC_1);
 
-	out_ula.write(sig_s.read());
+	out_data.write(sig_s.read());
 }

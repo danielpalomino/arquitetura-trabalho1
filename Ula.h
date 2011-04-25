@@ -3,7 +3,7 @@
 SC_MODULE(Ula){
 	sc_in<sc_logic> control;
 	sc_in<sc_int<32> > op_a, op_b;
-	sc_out<sc_int<32> > out_ula;
+	sc_out<sc_int<32> > out_data;
 	sc_out<sc_logic> flag_z;
 
 	sc_signal<sc_int<32> > sig_s;

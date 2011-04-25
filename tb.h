@@ -1,14 +1,13 @@
-#include <systemc.h>
-#include "Half_add.h"
+#include "systemc.h"
+#include "Processor.h"
 
 
 
 SC_MODULE(testbench) {
-	sc_signal<sc_logic>   a, b, s, c;      
 	sc_signal<sc_logic>   clock;    
 
 
-	Half_add* somador;
+	Processor *processador;
 
 
 	void clock_gen();
@@ -21,15 +20,9 @@ SC_MODULE(testbench) {
 
 		sc_trace_file *tf;
 		tf = sc_create_vcd_trace_file("main.trace");
-		somador = new Half_add("somador");
+		processador = new Processor("processador");
 
-		somador->a(a);
-		somador->b(b);
-		somador->c(c);
-		somador->s(s);
 		sc_trace(tf,clock,"clk");
-		sc_trace(tf,somador->a,"a");
-		sc_trace(tf,somador->c,"s");
 
 
 		SC_THREAD(clock_gen);

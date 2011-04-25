@@ -1,6 +1,6 @@
 #include "systemc.h"
 
-SC_MODULE(MemIntruction){
+SC_MODULE(MemInstruction){
 	sc_in<sc_uint<32> > pc;
 	sc_out<sc_int<32> > instruction;
 

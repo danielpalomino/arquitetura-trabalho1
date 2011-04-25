@@ -1,8 +1,8 @@
 #include "MemData.h"
 
-MemData::compute() {
+void MemData::compute() {
 	if(control.read() == SC_LOGIC_0)
-		out_data = mem[adress];
+		out_data = mem[adress.read()];//LEITURA
 	else
-		mem[adress] = in_data;
+		mem[adress.read()] = in_data;//ESCRITA
 }
