@@ -45,9 +45,10 @@ void Processor::computeInstruction() {
 	ula.flag_z(ulaFlagZ);
 	//amarrar a saida da ula a memoria de dados e ao breg
 	memData.control(MemReadWrite);
+	memData.out_data(outMemData);
 	memData.adress(outUla);
 	memData.in_data(outBreg2);
-	memData.out_data(outMemData);
+
 	if(MemtoReg.read() == SC_LOGIC_0)
 		breg.in_data(outMemData);
 	else

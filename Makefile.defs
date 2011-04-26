@@ -1,5 +1,5 @@
 ## Variable that points to SystemC installation path
-SYSTEMC = /opt/systemc-2.2.0
+SYSTEMC = /opt/systemc-2.2.0/
 #
 # That's all for you!!!
 

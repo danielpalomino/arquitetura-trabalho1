@@ -15,7 +15,7 @@ MODULE = adder
 
 
 
-SRCS = main.cpp Control.cpp MemInstruction.cpp Breg.cpp Ula.cpp MemData.cpp Processor.cpp
+SRCS = main.cpp clockgen.cpp Control.cpp MemInstruction.cpp Breg.cpp Ula.cpp MemData.cpp Processor.cpp
 	   
 
 

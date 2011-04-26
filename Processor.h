@@ -7,17 +7,11 @@
 
 SC_MODULE(Processor){
 	sc_in<sc_logic> clock;
-
 	Control control;
 	MemInstruction memInstruction;
 	Breg breg;
 	Ula ula;
 	MemData memData;
-	//Control *control;
-	//MemInstruction *memInstruction;
-	//Breg *breg;
-	//Ula *ula;
-	//MemData *memData;
 
 	//sinais de controle
 	sc_signal<sc_uint<6> > op;
@@ -40,14 +34,8 @@ SC_MODULE(Processor){
 	sc_signal<sc_int<32> > outMemData;
 
 	void computeInstruction();
-	//control = new Control();
-	//memInstruction = new MemInstruction();
-	//breg = new Breg();
-	//ula = new Ula();
-	//memData = new MemData();
 
-	SC_CTOR(Processor) : control("controle"), memInstruction("memIns"), breg("bancoReg"), ula ("regs"), memData("memData")
-   {
+	SC_CTOR(Processor) : control("controle"), memInstruction("memIns"), breg("bancoReg"), ula ("regs"), memData("memData") {
 		pc = 0;
 		SC_METHOD(computeInstruction);
 		sensitive << clock;

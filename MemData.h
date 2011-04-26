@@ -13,6 +13,6 @@ SC_MODULE(MemData){
 
 	SC_CTOR(MemData){
 		SC_METHOD(compute);
-		sensitive << adress;
+		sensitive << adress << in_data << out_data << control;
 	}
 };
